@@ -58,12 +58,16 @@ public class UserEtudiant {
 		
 		Comparator<Etudiant> cMaxMoy = (Etudiant a, Etudiant b)->
 		{
-			int res=-1000;
+			//int res=-1000;
 			
-			if(b.getMoy()-a.getMoy()==0) res = 0;
-			else if(b.getMoy()-a.getMoy()<0) res = -1;
-			else res = 1;
-			return res;
+			//if(b.getMoy()-a.getMoy()==0) res = 0;
+			//else if(b.getMoy()-a.getMoy()<0) res = -1;
+			//else res = 1;
+			//return res;
+			
+			//int val = (b.getMoy() == a.getMoy()) ? 0 : (b.getMoy()<a.getMoy()) ? -1 : 1;
+			//return val;
+			return (b.getMoy() == a.getMoy()) ? 0 : (b.getMoy()<a.getMoy()) ? -1 : 1;
 		};
 		
 		Stream<Etudiant> stream1 = students.stream();
