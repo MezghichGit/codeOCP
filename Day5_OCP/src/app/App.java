@@ -2,9 +2,11 @@ package app;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class App {
@@ -43,17 +45,21 @@ public class App {
 		
 		System.out.println( s.map(String::length).reduce(0,(a,b)->a+b));*/
 		
-		List<String> zero = Arrays.asList();
+		/*List<String> zero = Arrays.asList();
 		List<String> one = Arrays.asList("Bonobo");
 		List<String> two = Arrays.asList("Mama Gorilla", "Baby Gorilla");
-		Stream<List<String>> animals = Stream.of(zero, one, two);
+		Stream<List<String>> animals = Stream.of(zero, one, two);*/
 		
 		//animals.flatMap(l -> l.stream()).forEach(System.out::println);
 		//animals.forEach(System.out::println);
 		//animals.flatMap(l -> l.stream()).forEach(System.out::println);
-		List<String> ls = animals.flatMap(l -> l.stream()).collect(Collectors.toList());
-		System.out.println(ls);
+		/*List<String> ls = animals.flatMap(l -> l.stream()).collect(Collectors.toList());
+		System.out.println(ls);*/
 		
+		//Stream<String> s = Stream.of("b", "a","c");
+		//s.sorted(Comparator.reverseOrder()).forEach(System.out::print); 
+		IntStream rangeClosed = IntStream.rangeClosed(1, 5);
+		rangeClosed.forEach(System.out::println);
 	}
 
 }
